@@ -1,232 +1,50 @@
 ID,Garment Layer,Colour
-1,Bottom,Light Blue
-2,Bottom,Dark Blue
-3,Top,White
-4,Bottom,Dark Blue
-5,Bottom,Pink
-6,Top,Black
-7,Bottom,Pink
-8,Bottom,Pink
-9,Top,Orange
-10,Bottom,Pink
-11,Dress,Black
-12,Top,Green
-13,Bag,Pink
-14,Bag,Blue
-15,Bottom,Black
-16,Shoe,Black
-17,Top,Black
-18,Dress,Pink
-19,Bottom,Beige
-20,Bottom,Red
-21,Top,Beige
-22,Top,Blue
-23,Top,Blue
-24,Bottom,Beige
-25,Top,Blue
-26,Top,Green
-27,Bottom,Black
-28,Top,White
-29,Bottom,Pink
-30,Top,Pink
-31,Top,Pink
-32,Top,Black
-33,Top,Light Blue
-34,Bottom ,Light Blue
-35,Top,Beige
-36,Bottom,Black
-37,Top,Yellow
-38,Top,Orange
-39,Dress,Black
-40,Bottoms,Black
-41,Top,Black
-42,Top,Light Blue
-43,Bottom,Light Blue
-44,Bottom,White
-45,Bottom,Black
-46,Top,Purple
-47,Bottom,Brown
-48,Top,Red
-49,Bottom,Light Blue
-50,Bottom,Black
-51,Bottom,Black
-52,Dress,Black
-53,Bottom,Dark Blue
-54,Dress,Light Blue
-55,Top,Red
-56,Bottom,Orange
-57,Bottom,Black
-58,Bottom,Yellow
-59,Top,Red
-60,Bottom,Black
-61,Bottom,White
-62,Top,Beige
-63,Top,Purple
-64,Top,Yellow
-65,Top,Gold
-66,Bottom,Black
-67,Bottom,Black
-68,Top,Purple
-69,Shoe,Pink
-70,Shoe,Purple
-71,Bottom,Light Blue
-72,Bottom,Dark Blue
-73,Top,Light Blue
-74,Bottom,Pink
-75,Top,Pink
-76,Dress,White
-77,Top,White
-78,Bottom,Grey
-79,Top,Yellow
-80,Bottom,Green
-81,Top,White
-82,Dress,Pink
-83,Dress,Yellow
-84,Top,Green
-85,Bottom,White
-86,Top,Pink
-87,Bottom,Orange
-88,Top,Blue
-89,Bottom,Black
-90,Top,Red
-91,Top,White
-92,Dress,Black
-93,Bottom,Green
-94,Top,Black
-95,Dress,Black
-96,Top,White
-97,Top,Yellow
-98,Bottom,Black
-99,Shoe,Yellow
-100,Top,Blue
-101,Bottom,Purple
-102,Top,Pink
-103,Top,Pink
-104,Top,Light Blue
-105,Shoe,Red
-106,Top,Pink
-107,Dress,Pink
-108,Top,Orange
-109,Bottom,Pink
-110,Top,Light Blue
-111,Bottom,Pink
-112,Bottom,White
-113,Top,Black
-114,Dress,Pink
-115,Shoe,Brown
-116,Shoe,Brown
-117,Top,Black
-118,Dress,Pink
-119,Top,Blue
-120,Top,Beige
-121,Dress,Black
-122,Bottom,Light Blue
-123,Dress,Black
-124,Top,Brown
-125,Bottom,Black
-126,Dress,Brown
-127,Top,Pink
-128,Shoe,Pink
-129,Top,Black
-130,Top,Red
-131,Shoe,White
-132,Bottom,Pink
-133,Bag,Red
-134,Dress,Black
-135,Top,Pink
-136,Bottom,Blue
-137,Top,Orange
-138,Top,White
-139,Bag,Pink
-140,Bag,Pink
-141,Dress,Blue
-142,Top,Black
-143,Top,Blue
-144,Top,Green
-145,Dress,Black
-146,Dress,Brown
-147,Top,Black
-148,Dress,Black
-149,Top,Blue
-150,Top,Black
-151,Bottom,Black
-152,Dress,Black
-153,Bottom,Blue
-154,Bottom,Black
-155,Top,Black
-156,Bottom,Black
-157,Dress,Black
-158,Top,Red
-159,Bottom,Black
-160,Top,Pink
-161,Bottom,Brown
-162,Top,Red
-163,Bottom ,Light Blue
-164,Top,Purple
-165,Shoe,White
-166,Shoe,White
-167,Shoe,White
-168,Shoe,Pink
-169,Shoe,Pink
-170,Shoe,Pink
-171,Bottom,Green
-172,Bottom,Black
-173,Shoe,Red
-174,Bottom,Light Blue
-175,Bottom,Light Blue
-176,Bottom,Green
-177,Bottom,Pink
-178,Shoe,White
-179,Shoe,White
-180,Top,Black
-181,Dress,Black
-182,Dress,Light Blue
-183,Top,Green
-184,Dress ,White
-185,Bottom,Black
-190,Bottom,Light Blue
-191,Bottom,Black
-192,Dress,Yellow
-193,Top,Yellow
-194,Shoe,Black
-195,Top,Red
-196,Top,Blue
-197,Top,Red
-198,Top,Black
-199,Dress,Black
-200,Top,Blue
-201,Dress,Pink
-202,Dress,Black
-203,Top,Beige
-204,Top,Pink
-205,Bottom,Black
-206,Top,Black
-207,Top,Blue
-208,Top,Purple
-209,Top,Pink
-210,Top,Grey
-211,Bottom,Yellow
-212,Bottom,Black
-213,Bottom,Pink
-214,Bottom,Pink
-215,Bottom,PInk
-216,Bag,Yellow
-217,Bottom,Pink
-218,Top,Black
-219,Top,Grey
-220,Top,Blue
-221,Bottom,Purple
-222,Top,White
-223,Top,Pink
-224,Bottom,Pink
-225,Top,Pink
-226,Dress,Black
-227,Bag,Blue
-228,Bottom,Black
-229,Top,Pink
-230,Top,Black
-231,Top,Purple
-232,Bottom,Grey
-233,Dress,Purple
-234,Top,White
-235,Bottom,Black
+1,Garment Layer,whitesmoke
+2,Garment Layer,darkslategray
+3,Garment Layer,whitesmoke
+4,Garment Layer,darkslateblue
+5,Garment Layer,lightpink
+6,Garment Layer,black
+7,Garment Layer,lightpink
+8,Garment Layer,tan
+9,Garment Layer,darkslategray
+10,Garment Layer,pink
+11,Garment Layer,snow
+12,Garment Layer,whitesmoke
+13,Garment Layer,brown
+14,Garment Layer,lightgray
+15,Garment Layer,black
+16,Garment Layer,gainsboro
+17,Garment Layer,black
+18,Garment Layer,purple
+19,Garment Layer,rosybrown
+20,Garment Layer,firebrick
+21,Garment Layer,peru
+22,Garment Layer,thistle
+23,Garment Layer,lightslategray
+24,Garment Layer,burlywood
+25,Garment Layer,lightsteelblue
+26,Garment Layer,darkslategray
+27,Garment Layer,darkslategray
+28,Garment Layer,gainsboro
+29,Garment Layer,palevioletred
+30,Garment Layer,gainsboro
+31,Garment Layer,lightcoral
+32,Garment Layer,lightgray
+33,Garment Layer,lavender
+34,Garment Layer,slategray
+35,Garment Layer,tan
+36,Garment Layer,darkslategray
+37,Garment Layer,gainsboro
+38,Garment Layer,navajowhite
+39,Garment Layer,black
+40,Garment Layer,darkslategray
+41,Garment Layer,black
+42,Garment Layer,lavender
+43,Garment Layer,slategray
+44,Garment Layer,gainsboro
+45,Garment Layer,black
+46,Garment Layer,lavender
+47,Garment Layer,sienna
+48,Garment Layer,darksalmon
+49,Garment Layer,darkslateblue
