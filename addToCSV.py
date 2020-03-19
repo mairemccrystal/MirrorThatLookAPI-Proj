@@ -38,7 +38,7 @@ with open('garments.csv', 'w', newline='') as csvfile:
 
     writer = csv.writer(csvfile)
     writer.writerow(["ID", "Garment Layer", "Colour"])
-    for i in range(504, 550):
+    for i in range(1, 10):
         #print(i);
         IDread = str(i)
         imgStore = ('data/' + IDread + '.jpeg')
