@@ -107,7 +107,7 @@ def mirrorLook():
     # Request parameters
     'image': 'https://contestimg.wish.com/api/webimage/5c394bfbe3e6604287a573da-large.jpg?cache_buster=276746c000af54b686498893ade2baea',
     # 'gender': '{string}',
-    # 'limit': '{string}',
+    'limit': '1',
 })
 
     try:
@@ -118,15 +118,26 @@ def mirrorLook():
     # print(data)
 
         my_json = data.decode('utf8')
-        print(my_json)
+        python_obj = json.loads(my_json)
+        for link in python_obj["result"][0]["link"]:
+                value = link["value"]
+                break
+        else:
+            # Some default action
+            print("none found")
+
+        print
+        "Value:", value
+
         conn.close()
     except Exception as e:
         print("[Errno {0}] {1}".format(e.errno, e.strerror))
 
     return my_json
-
-
-
+    #return make_response(jsonify(my_json.find('gender')))
+    #this gives me a value e.g in this instance 298
+    #return make_response(jsonify({"link": "link"}))
+    #return newthing
 
 if __name__ == "__main__":
     app.run(port=4555, debug=True)
