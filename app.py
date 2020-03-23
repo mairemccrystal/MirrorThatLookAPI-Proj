@@ -3,7 +3,10 @@ from flask import Flask, render_template, request, jsonify, make_response
 from flask_cors import CORS
 from pymongo import MongoClient
 from bson import ObjectId, json_util
+import http.client, urllib.request, urllib.parse, urllib.error, base64
+import requests
 import json
+
 
 
 app = Flask(__name__)
@@ -45,6 +48,7 @@ def showAll():
     data_to_return = []
     for x in dbCollection.find():
         data_to_return.append(x)
+    #return make_response(jsonify({data_to_return}))
     return json.dumps(data_to_return, indent=4, default=json_util.default)
 
 @app.route("/showColour", methods=['POST', 'GET'])
@@ -89,6 +93,40 @@ def upload():
         file.save(destination)
 
     return render_template("complete.html")
+
+#use the mirrorLookAPI
+@app.route("/sim", methods=['POST', 'GET'])
+def mirrorLook():
+    headers = {
+    # Request headers
+    'Ocp-Apim-Subscription-Key': 'ba10a036532d4c438ded719c0f797a4e',
+    'Ocp-Apim-Subscription-Key': 'ba10a036532d4c438ded719c0f797a4e',
+}
+
+    params = urllib.parse.urlencode({
+    # Request parameters
+    'image': 'https://contestimg.wish.com/api/webimage/5c394bfbe3e6604287a573da-large.jpg?cache_buster=276746c000af54b686498893ade2baea',
+    # 'gender': '{string}',
+    # 'limit': '{string}',
+})
+
+    try:
+        conn = http.client.HTTPSConnection('api.mirrorthatlook.com')
+        conn.request("GET", "/v2/mirrorthatlook?%s" % params, "{body}", headers)
+        response = conn.getresponse()
+        data = response.read()
+    # print(data)
+
+        my_json = data.decode('utf8')
+        print(my_json)
+        conn.close()
+    except Exception as e:
+        print("[Errno {0}] {1}".format(e.errno, e.strerror))
+
+    return my_json
+
+
+
 
 if __name__ == "__main__":
     app.run(port=4555, debug=True)
