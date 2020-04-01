@@ -11,6 +11,8 @@ headers = {
 params = urllib.parse.urlencode({
     # Request parameters
     'image': 'https://contestimg.wish.com/api/webimage/5c394bfbe3e6604287a573da-large.jpg?cache_buster=276746c000af54b686498893ade2baea',
+   # 'image': 'https://cdn.shopify.com/s/files/1/2017/8131/products/TouchyFeelyVelourDress_04_1024x.jpg?v=1574073885',
+
     # 'gender': '{string}',
    # 'limit': '1',
 })
@@ -33,7 +35,7 @@ print((loaded_json["result"][0]["group"]))
 
 print(loaded_json)
 print((loaded_json["result"][0]["products"][0]["affiliates"][0]["link"]))
-for x in range(22):
+for x in range(21):
     print((loaded_json["result"][0]["products"][x]["affiliates"][0]["link"]))
 #new_json = str(new_json).strip('[]')
 

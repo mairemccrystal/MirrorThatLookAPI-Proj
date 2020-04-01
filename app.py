@@ -95,49 +95,80 @@ def upload():
     return render_template("complete.html")
 
 #use the mirrorLookAPI
+
 @app.route("/sim", methods=['POST', 'GET'])
 def mirrorLook():
     headers = {
-    # Request headers
-    'Ocp-Apim-Subscription-Key': 'ba10a036532d4c438ded719c0f797a4e',
-    'Ocp-Apim-Subscription-Key': 'ba10a036532d4c438ded719c0f797a4e',
-}
+        # Request headers
+        'Ocp-Apim-Subscription-Key': 'ba10a036532d4c438ded719c0f797a4e',
+        'Ocp-Apim-Subscription-Key': 'ba10a036532d4c438ded719c0f797a4e',
+    }
 
     params = urllib.parse.urlencode({
-    # Request parameters
-    'image': 'https://contestimg.wish.com/api/webimage/5c394bfbe3e6604287a573da-large.jpg?cache_buster=276746c000af54b686498893ade2baea',
-    # 'gender': '{string}',
-    'limit': '1',
-})
+        # Request parameters
+        'image': 'https://contestimg.wish.com/api/webimage/5c394bfbe3e6604287a573da-large.jpg?cache_buster=276746c000af54b686498893ade2baea',
+        # 'gender': '{string}',
+         #'limit': '2',
+    })
 
-    try:
-        conn = http.client.HTTPSConnection('api.mirrorthatlook.com')
-        conn.request("GET", "/v2/mirrorthatlook?%s" % params, "{body}", headers)
-        response = conn.getresponse()
-        data = response.read()
+    conn = http.client.HTTPSConnection('api.mirrorthatlook.com')
+    conn.request("GET", "/v2/mirrorthatlook?%s" % params, "{body}", headers)
+    response = conn.getresponse()
+    data = response.read()
     # print(data)
 
-        my_json = data.decode('utf8')
-        python_obj = json.loads(my_json)
-        for link in python_obj["result"][0]["link"]:
-                value = link["value"]
-                break
-        else:
-            # Some default action
-            print("none found")
+    my_json = data.decode('utf8')
+    python_obj = json.loads(my_json)
 
-        print
-        "Value:", value
+    loaded_json = json.dumps(my_json)
+    loaded_json = json.loads(my_json)
 
-        conn.close()
-    except Exception as e:
-        print("[Errno {0}] {1}".format(e.errno, e.strerror))
+    #print(loaded_json)
+    linksData = []
+    links = ((loaded_json["result"][0]["products"][0]["affiliates"][0]["link"]))
+    for x in range(10):
+        y = ((loaded_json["result"][0]["products"][x]["affiliates"][0]["link"]))
+        linksData.append(y)
 
-    return my_json
-    #return make_response(jsonify(my_json.find('gender')))
-    #this gives me a value e.g in this instance 298
-    #return make_response(jsonify({"link": "link"}))
-    #return newthing
+    # new_json = str(new_json).strip('[]')
+
+    #return links
+    return make_response(jsonify(linksData))
+
+
+@app.route("/classification", methods=['POST', 'GET'])
+def classifyImage():
+    headers = {
+        # Request headers
+        'Ocp-Apim-Subscription-Key': 'ba10a036532d4c438ded719c0f797a4e',
+        'Ocp-Apim-Subscription-Key': 'ba10a036532d4c438ded719c0f797a4e',
+    }
+
+    params = urllib.parse.urlencode({
+        # Request parameters
+        'image': 'https://contestimg.wish.com/api/webimage/5c394bfbe3e6604287a573da-large.jpg?cache_buster=276746c000af54b686498893ade2baea',
+        # 'gender': '{string}',
+         #'limit': '2',
+    })
+
+    conn = http.client.HTTPSConnection('api.mirrorthatlook.com')
+    conn.request("GET", "/v2/mirrorthatlook?%s" % params, "{body}", headers)
+    response = conn.getresponse()
+    data = response.read()
+    # print(data)
+
+    my_json = data.decode('utf8')
+    python_obj = json.loads(my_json)
+
+    loaded_json = json.dumps(my_json)
+    loaded_json = json.loads(my_json)
+
+    # this works to classify the group that the item is in from the image
+    classification = ((loaded_json["result"][0]["group"]))
+
+    #return links
+    return make_response(jsonify(classification))
+
 
 if __name__ == "__main__":
     app.run(port=4555, debug=True)
