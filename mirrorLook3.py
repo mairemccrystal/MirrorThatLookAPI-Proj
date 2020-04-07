@@ -10,8 +10,9 @@ headers = {
 
 params = urllib.parse.urlencode({
     # Request parameters
-    'image': 'https://contestimg.wish.com/api/webimage/5c394bfbe3e6604287a573da-large.jpg?cache_buster=276746c000af54b686498893ade2baea',
-   # 'image': 'https://cdn.shopify.com/s/files/1/2017/8131/products/TouchyFeelyVelourDress_04_1024x.jpg?v=1574073885',
+   # 'image': 'https://contestimg.wish.com/api/webimage/5c394bfbe3e6604287a573da-large.jpg?cache_buster=276746c000af54b686498893ade2baea',
+    'image': 'https://cdn.shopify.com/s/files/1/2017/8131/products/TouchyFeelyVelourDress_04_1024x.jpg?v=1574073885',
+   #  'image': 'http://127.0.0.1:4555/image',
 
     # 'gender': '{string}',
    # 'limit': '1',

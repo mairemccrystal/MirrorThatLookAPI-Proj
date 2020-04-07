@@ -7,11 +7,8 @@ import http.client, urllib.request, urllib.parse, urllib.error, base64
 import requests
 import json
 
-
-
-app = Flask(__name__)
+app = Flask(__name__, static_folder='C:/Users/User/Desktop/python component/data' )
 CORS(app)
-
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -133,8 +130,9 @@ def mirrorLook():
     # new_json = str(new_json).strip('[]')
 
     #return links
-    return make_response(jsonify(linksData))
 
+    return make_response(jsonify(linksData))
+    # ^ thiz returns the array i.e multiple links
 
 @app.route("/classification", methods=['POST', 'GET'])
 def classifyImage():
@@ -169,6 +167,39 @@ def classifyImage():
     #return links
     return make_response(jsonify(classification))
 
+@app.route("/imgup", methods=['POST', 'GET'])
+def uploadImage():
+    import http.client, urllib.request, urllib.parse, urllib.error, base64
 
+    headers = {
+        # Request headers
+        'Ocp-Apim-Subscription-Key': 'ba10a036532d4c438ded719c0f797a4e',
+        'Ocp-Apim-Subscription-Key': 'ba10a036532d4c438ded719c0f797a4e',
+    }
+
+    params = urllib.parse.urlencode({
+        'image': 'data/43.jpeg',
+    })
+
+    try:
+        conn = http.client.HTTPSConnection('api.mirrorthatlook.com')
+        conn.request("POST", "/v2/upload_image?%s" % params, "{body}", headers)
+        response = conn.getresponse()
+        data = response.read()
+        print(data)
+        conn.close()
+    except Exception as e:
+        print("[Errno {0}] {1}".format(e.errno, e.strerror))
+
+        return data
+
+
+
+@app.route("/image", methods=['POST', 'GET'])
+def Image():
+    full_filename = 'data/9.jpeg'
+    print(full_filename)
+
+    return render_template("image.html", user_image=full_filename)
 if __name__ == "__main__":
     app.run(port=4555, debug=True)
